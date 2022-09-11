@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers Club</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/fc91ff280c.js" crossorigin="anonymous"></script>
+</head>
+<body class="contactpage">
+    <nav class="navbar">
+        <ul>
+            <a href="/"><img src="{%static 'images/shopclublogo.png' %}" alt=""></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li id="logout">Logout</li>
+        </ul>
+        <li id="login"><a href="/login">Login</a>
+            <i class="fa fa-user fa-xl" aria-hidden="true"></i>
+        </li>
+    </nav>
+    <section class="contactsection">
+        <div class="contactbox">
+            <div class="contactleft">
+                <img src="{%static 'Images/contactmain.jpg' %}" alt="">
+            </div>
+            <div class="contactright">
+                <h3>Phone Support</h3>
+                <span>Hours: 9Am-5Pm,Monday-friday</span>
+                <span>844-662-3273</span>
+                <h3>E-Mail</h3>
+                <span>Shoppersclub@gmail.com</span>
+                <div>
+                    <a href="mailto:shoppersclub@gmail.com? subject=Learn about MailTo tags in HTML">Send Mail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span>Copyright © ShoppersClub.com | All rights reserved</span>
+    </footer>
+</body>
+</html>

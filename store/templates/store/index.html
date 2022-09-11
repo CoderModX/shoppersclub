@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers Club</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    
+    <script src="https://kit.fontawesome.com/fc91ff280c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <a href="/"><img src="{%static 'images/shopclublogo.png' %}" alt=""></a>
+                <li><a href="/">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li id="logout">Log Out</a> </li>
+            </ul>
+            <li id="login"><a href="/login">Login</a>
+                <i class="fa fa-user fa-xl" aria-hidden="true"></i>
+            </li>
+        </nav>
+        <button id="btn1"></button>
+
+        <section class="slider">
+            <img src="{%static 'images/sliderimage1.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage2.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage3.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage4.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage5.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage6.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage7.jpg' %}" alt="">
+            <img src="{%static 'images/sliderimage8.jpg' %}" alt="">
+        </section>
+        <button id="btn1"></button>
+        <div class="sliderbuttons">
+            <span id="0" class="button active"></span>
+            <span id="1" class="button"></span>
+            <span id="2" class="button"></span>
+            <span id="3" class="button"></span>
+            <span id="4" class="button"></span>
+            <span id="5" class="button"></span>
+            <span id="6" class="button"></span>
+            <span id="7" class="button"></span>
+        </div>
+        <section class="section2">
+            <div class="products">
+                <div class="product">
+                    <img src="{%static 'images/shirt.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 2.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 3.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 4.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 10.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 6.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 7.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="{%static 'images/Products/product img 8.png' %}" alt="">
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="pricetag">₹450</span>
+                            <button class="btn"><a href="/products">View</a></button>
+                        </div>
+                        <div class="cartbuttons">
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>  Group</button>
+                            <button class="btn"><i class="fa fa-plus fa-lg" aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i> Personal</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <h1>Our Sellers</h1>
+            <div class="sponsers">
+                <img src="{%static 'Images/Oursponsers/brand1.png' %}" alt="">
+                <img src="{%static 'Images/Oursponsers/brand2.png' %}" alt="">
+                <img src="{%static 'Images/Oursponsers/brand3.png' %}" alt="">
+                <img src="{%static 'Images/Oursponsers/brand4.png' %}" alt="">
+            </div>
+        </section>
+        <footer>
+            <span>Copyright © ShoppersClub.com | All rights reserved</span>
+        </footer>
+    </div>
+    {% endblock content %}
+    
+</body>
+<script src="{% static '/js/hardik.js' %}"  type="text/javascript"></script>
+<script src="{% static '/js/jubraj.js' %}"  type="module"></script>
+
+</html>

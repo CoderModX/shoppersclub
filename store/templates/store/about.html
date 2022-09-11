@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers Club</title>
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <script src="https://kit.fontawesome.com/fc91ff280c.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    #about {
+    background: url('% static "/static/images/about-background.jpg" %') no-repeat center center/cover fixed;
+}
+</style>
+<body id="about" >
+    <nav class="navbar">
+        <ul>
+            <a href="/"><img src="{%static 'images/shopclublogo.png' %}" alt=""></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li id="logout">Logout</li>
+        </ul>
+        <li id="login"><a href="/login">Login</a>
+            <i class="fa fa-user fa-xl" aria-hidden="true"></i>
+        </li>
+    </nav>
+    <section class="aboutsection">
+        <div class="aboutbox">
+            <div class="left">
+                <img src="{%static 'images/shopclublogo.png' %}" alt="">
+                <span class="logoname">SHOPPERS</span>
+                <span class="logoname">CLUB</span>
+            </div>
+            <hr>
+            <div class="right">
+                <h2>About</h2>
+                <p>
+                    Shoppers Club is an ecommerce platform which focuses on bringing people together via group shopping
+                    that is the core feature of the platform.
+                </p>
+                <p>
+                    It also provide a virtual try on feature that
+                    the user can use to view any product for the
+                    size. We will later expand in many products and
+                    visual experiences.
+                </p>
+                <p id="rightend">Made with ❤️ in India</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span>Copyright © ShoppersClub.com | All rights reserved</span>
+    </footer>
+</body>
+
+</html>

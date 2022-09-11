@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppers Club</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/fc91ff280c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <a href="/"><img src="{%static 'images/shopclublogo.png' %}" alt=""></a>
+            <li><a href="/">Home</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li id="logout">Logout</li>
+        </ul>
+        <li id="login"><a href="/login">Login</a>
+            <i class="fa fa-user fa-xl" aria-hidden="true"></i>
+        </li>
+    </nav>
+    <div class="productcontainer">
+        <div class="productbox">
+            <img src="{%static 'images/shirt.png' %}" alt="">
+            <hr>
+            <div class="productright">
+                <h1>Roadster Tshirt</h1>
+                <hr>
+                <div class="priceinfo">
+                    <span class="priceview">₹250</span>
+                    <span class="priceview">Select Size</span>
+                    <div class="clothsize">
+                        <input type="radio" id="s" name="size">
+                        <label for="s">S</label>
+                        <input type="radio" id="m" name="size">
+                        <label for="m">M</label>
+                        <input type="radio" id="l" name="size">
+                        <label for="l">L</label>
+                        <input type="radio" id="xl" name="size">
+                        <label for="xl">XL </label>
+                    </div>
+                    <span>100% Original Products</span>
+                    <span>Cash on delivery available</span>
+                    <span>Try & Buy available</span>
+                    <div class="viewphasebuttons">
+                        <button class="btn"><a href="/uploadimage">View</a></button>
+                        <button class="btn"><a href="/product"><i class="fa fa-plus fa-lg"
+                                    aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>
+                                Group</a></button>
+                        <button class="btn"><a href="/product"><i class="fa fa-plus fa-lg"
+                                    aria-hidden="true"></i> <i class="fa fa-thin fa-cart-shopping"></i>
+                                Personal</a></button>
+                    </div>
+                    <!-- <input type="radio" id="small" value="small" name="shirt_size"><label for="small">Small</label> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <span>Copyright © ShoppersClub.com | All rights reserved</span>
+    </footer>
+</body>
+
+</html>

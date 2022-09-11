@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc91ff280c.js" crossorigin="anonymous"></script>
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body class="login">
+    <div class="loginpagecontainer">
+        <div class="loginbox">
+            <p>Register</p>
+            <div class="loginboxentry">
+                <i class="fa fa-envelope"></i>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="loginboxentry">
+                <i class="fa fa-key"></i>
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="loginboxentry">
+                <i class="fa fa-user fa-xl" aria-hidden="true"></i>
+                <input type="text" name="username" id="username" placeholder="Enter your username">
+            </div>
+            <div class="loginboxbuttons">
+                <button class="btn" value="Sign up" id="signUp"><a href="/"></a> Register</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-database.js";
+    // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyByhfNIKlUejL_DZ8nX14shF3ecrOAoEtw",
+      authDomain: "shoppers-club-23c3c.firebaseapp.com",
+      databaseURL: "https://shoppers-club-23c3c-default-rtdb.firebaseio.com",
+      projectId: "shoppers-club-23c3c",
+      storageBucket: "shoppers-club-23c3c.appspot.com",
+      messagingSenderId: "776825500422",
+      appId: "1:776825500422:web:e77f016cc93a9b41d86487",
+      measurementId: "G-FL037WLX5Z"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth =getAuth();
+    // const analytics = getAnalytics(app);
+
+    signUp.addEventListener('click',(e)=>{
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var username = document.getElementById('username').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+
+                set(ref(database, 'users/' + user.uid),{
+                    username: username,
+                    email: email
+                })
+
+                alert('User Created');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                
+                alert(errorMessage);
+
+                // ..
+            });
+    });
+
+
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/firebase.User
+        const uid = user.uid;
+        // ...
+    } else {
+        // User is signed out
+        // ...
+    }
+    });
+  </script>
+</html>
