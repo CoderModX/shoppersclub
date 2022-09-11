@@ -5,7 +5,7 @@
 
 body{
     height: 100vh;
-    background-image: linear-gradient(white , rgb(151, 66, 235));
+    background-image: linear-gradient(white , rgb(180 180 180));
 }
 /* logo  */
 #logo{
@@ -29,6 +29,7 @@ h1{
     padding: 30px;
     overflow-y:auto;
     border-radius: 20px;
+    background-color: white;
 }
 .message{
     background-color: gray;
@@ -70,3 +71,4 @@ h1{
     border-radius: 7px;
     cursor: pointer;
 }
+

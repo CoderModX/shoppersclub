@@ -3,7 +3,8 @@ const socket=io('http://localhost:3000')
 const form =document.getElementById('send-box');
 const messageinput=document.getElementById('message-input');
 const messagecontainer=document.querySelector('.container');
-
+const d=new Date();
+let a='       ';
 var audio= new Audio('ting.mp3');
 
 
@@ -32,7 +33,7 @@ socket.on('user-joined',name=>{
     append(`${name} joined the chat`,'left');
 })
 socket.on('recieved',data=>{
-    append(`${data.name}: ${data.message}`,'left');
+    append(`${d.getHours()}:${d.getMinutes()} \xa0\xa0\xa0\xa0\xa0 ${data.name}: ${data.message}`,'left');
 })
 socket.on('leave',name=>{
     append(`${name} has left `, 'left');
