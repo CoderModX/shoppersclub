@@ -7,6 +7,6 @@ urlpatterns = [
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
     path('products/', views.products, name='products'),
-    path('uploadimage/', views.vr, name='uploadimage'),
-    path('vr/', views.image_request, name = "image-request")  
+    path('uploadimage/', views.uploadimage, name='uploadimage'),
+    path('success', views.success, name = 'success'),
 ]

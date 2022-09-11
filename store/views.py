@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from store.forms import UserImage
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from .forms import *
 
 # Create your views here.
 
@@ -24,5 +26,19 @@ def signup(request):
 def vr(request,):
     return render(request,"store/uploadpage.html")
 
-
+def uploadimage(request):
+  
+    if request.method == 'POST':
+        form = ClothForm(request.POST, request.FILES)
+  
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+    else:
+        form = ClothForm()
+    return render(request, 'store/uploadpage.html', {'form' : form})
+  
+  
+def success(request):
+    return HttpResponse('successfully uploaded')
 
